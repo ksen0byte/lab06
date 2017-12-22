@@ -2,15 +2,15 @@ package com.ksenobyte;
 
 public class Main {
     public static void main(String[] args) {
-        int n = 20;
-        System.out.println(calculate(1, n));
+        int n = 5;
+        System.out.println(calculate(2, n));
     }
 
-    private static double calculate(int a, int n) {
-        double result = (Math.pow(a, 2)) / (Math.exp(a) - Math.exp(-a));
-        if (a == n) {
+    private static double calculate(int l, int n) {
+        double result = Math.sin(l) / (Math.pow(l - 1., 2));
+        if (l == n) {
             return result;
         }
-        return result + calculate(++a, n);
+        return result * calculate(++l, n);
     }
 }
